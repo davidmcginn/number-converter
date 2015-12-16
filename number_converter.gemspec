@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.description = "Ruby gem for converting numbers from integer into other formats"
   s.authors     = ["Dave McGinn"]
   s.email       = 'davidmcginn@gmail.com'
-  s.files       = ["lib/number_converter.rb"]
+  s.files       = ["lib/number_converter.rb", "lib/number_converter/roman_numerals.rb"]
+  s.require_paths = ["lib", "lib/number_converter"]
   s.homepage    = 'http://davemcginn.ie'
-  s.license       = 'MIT'
+  s.license     = 'MIT'
 end
