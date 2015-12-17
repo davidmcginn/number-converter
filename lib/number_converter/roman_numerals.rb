@@ -2,7 +2,11 @@ class RomanNumerals
   def initialize
   end
 
-  def self.convert(number_to_convert)
+  def self.convert_to(number_to_convert)
+    raise "Argument is not an integer" unless number_to_convert.is_a? Integer
+
+    raise "There is no Roman numeral for zero" if (number_to_convert==0)
+
     input_number = number = number_to_convert
     roman_numeral = ""
 
@@ -34,4 +38,5 @@ class RomanNumerals
 
     return roman_numeral
   end
+
 end
