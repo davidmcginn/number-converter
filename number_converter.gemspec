@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Dave McGinn"]
   s.email       = 'davidmcginn@gmail.com'
   s.files       = ["lib/number_converter.rb", "lib/number_converter/roman_numerals.rb"]
-  s.require_paths = ["lib", "lib/number_converter"]
   s.homepage    = 'http://davemcginn.ie'
   s.license     = 'MIT'
 end
