@@ -13,4 +13,9 @@ class NumberConverter
       raise "Invalid conversion format"
     end
   end
+
+  def self.is_number?(number)
+    number =~ /\A\d+\z/ ? true : false
+  end
+
 end

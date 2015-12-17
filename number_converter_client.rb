@@ -10,11 +10,11 @@ input_numbers[-1].gsub!("=", "")
 
 print "Results:\n"
 input_numbers.each do |number|
-  number_as_integer = number.to_i
 
-  if (number_as_integer > 0)
-    roman_numeral = NumberConverter.new(number_as_integer).convert_to('roman')
-    puts "#{number_as_integer} => #{roman_numeral}"
+  if (NumberConverter::is_number?(number))
+    number = number.to_i
+    roman_numeral = NumberConverter.new(number).convert_to('roman')
+    puts "#{number} => #{roman_numeral}"
   else
     puts "#{number} => Error: Can only convert positive integers"
   end
