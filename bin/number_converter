@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'number_converter'
+
+number = ARGV[0]
+
+raise "Can only convert positive integers" if (!NumberConverter::is_number?(number))
+
+number = number.to_i
+
+converted_number = NumberConverter.new(number).convert_to('roman')
+
+print "#{number} => #{converted_number}\n"
