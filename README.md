@@ -14,18 +14,18 @@ To install the gem manually:
 
 There is also a script which performs the installation:
 
-  ./rebuild.sh
+    ./rebuild.sh
 
 ## Executables
 
-Usage:
-  bin/number_converter [number] [format]
-Valid formats:
-  roman
+    Usage:
+      bin/number_converter [number] [format]
+    Valid formats:
+      roman
 
 
 ## Client
 
 To run:
 
-  ruby number_converter_client.rb
+    ruby number_converter_client.rb
