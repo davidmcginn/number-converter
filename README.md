@@ -7,7 +7,7 @@ Ruby gem for converting a number into another format.
 To install the gem manually:
 
     gem build number_converter.gemspec
-    gem uninstall number_converter
+    bundle install
     gem install number_converter-X.X.X.gem
 
 ## Rebuild
@@ -29,3 +29,9 @@ There is also a script which performs the installation:
 To run:
 
     ruby number_converter_client.rb
+
+## Tests
+
+To run:
+
+    rake test
