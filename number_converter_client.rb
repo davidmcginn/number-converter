@@ -4,7 +4,7 @@ print "Please enter the integers that you would like to convert to Roman numeral
 $/ = "="
 input_numbers = STDIN.gets.split("\n")
 
-# Remove = from array
+# Remove '=' from array
 input_numbers.pop if (input_numbers[-1]=="=")
 input_numbers[-1].gsub!("=", "")
 
