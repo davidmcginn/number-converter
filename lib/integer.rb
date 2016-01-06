@@ -1,13 +1,7 @@
-class RomanNumerals
-  def initialize
-  end
+class Integer
 
-  def self.convert_to(number_to_convert)
-    raise "Argument is not an integer" unless number_to_convert.is_a? Integer
-
-    raise "There is no Roman numeral for zero" if (number_to_convert==0)
-
-    input_number = number = number_to_convert
+  def to_roman
+    number = self
     roman_numeral = ""
 
     reference_table = {

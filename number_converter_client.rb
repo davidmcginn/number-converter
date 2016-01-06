@@ -1,4 +1,5 @@
-require 'number_converter'
+# require 'number_converter'
+require './lib/integer'
 
 print "Please enter the integers that you would like to convert to Roman numerals. Enter = when you are finished.\n"
 $/ = "="
@@ -10,13 +11,10 @@ input_numbers[-1].gsub!("=", "")
 
 print "Results:\n"
 input_numbers.each do |number|
-
-  if (NumberConverter::is_number?(number))
-    number = number.to_i
-    roman_numeral = NumberConverter.new(number).convert_to('roman')
-    puts "#{number} => #{roman_numeral}"
-  else
+  
+  if !(number =~ /\A\d+\z/)
     puts "#{number} => Error: Can only convert positive integers"
+  else
+    puts "#{number} => #{number.to_i.to_roman}"
   end
-
 end
