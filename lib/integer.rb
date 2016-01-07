@@ -20,14 +20,10 @@ class Integer
       1 => 'I'
     }
 
-    while (number > 0)
-      reference_table.each do |reference_number, symbol|
-        if (reference_number <= number)
-          roman_numeral += symbol
-          number -= reference_number
-          break
-        end
-      end
+    reference_table.keys.each do |divisor|
+      quotient, modulus = number.divmod(divisor)
+      roman_numeral << reference_table[divisor] * quotient
+      number = modulus
     end
 
     return roman_numeral
